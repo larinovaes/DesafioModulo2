@@ -11,20 +11,32 @@ public class Desafio1Modulo2 {
         Scanner leitor = new Scanner(System.in);
         Map<String, String> funcionarios = new HashMap<String, String>();
 
-        System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
-        //fazendo lista de perguntas
-        System.out.println("Para cadastrar um funcionário digite seu nome: ");
-        String nome = leitor.nextLine();
-        System.out.println("CPF: ");
-        String cpf = leitor.nextLine();
-        System.out.println("Telefone: ");
-        String telefone = leitor.nextLine();
-        System.out.println("E-mail : ");
-        String email = leitor.nextLine();
+        boolean chave = true;
+        int menu = 0;
 
-        //Printando informações da lista na tela
-        funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " e-mail: " + email);
-        System.out.println(funcionarios);
-        System.out.println("Processo finalizado com sucesso!");
+        while (chave == true) {
+            //Fazendo o menu
+            System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
+            System.out.println("Digite 1 para prosseguir no cadastro e 2 para sair.");
+            menu = leitor.nextInt();
+            leitor.nextLine();
+
+            if (menu == 1) {
+                //fazendo lista de perguntas
+                System.out.println("Para cadastrar um funcionário digite seu nome: ");
+                String nome = leitor.nextLine();
+                System.out.println("CPF: ");
+                String cpf = leitor.nextLine();
+                System.out.println("Telefone: ");
+                String telefone = leitor.nextLine();
+                System.out.println("E-mail : ");
+                String email = leitor.nextLine();
+
+                //Printando informações da lista na tela
+                funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " e-mail: " + email);
+                System.out.println(funcionarios);
+                System.out.println("Processo finalizado com sucesso!");
+            }
+        }
     }
 }
