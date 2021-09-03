@@ -21,27 +21,31 @@ public class Desafio1Modulo2 {
             menu = leitor.nextInt();
             leitor.nextLine();
 
-            if (menu == 1) {
+            switch (menu) {
                 //fazendo lista de perguntas
-                System.out.println("Para cadastrar um funcionário digite seu nome: ");
-                String nome = leitor.nextLine();
-                System.out.println("CPF: ");
-                String cpf = leitor.nextLine();
-                System.out.println("Telefone: ");
-                String telefone = leitor.nextLine();
-                System.out.println("E-mail : ");
-                String email = leitor.nextLine();
+                case 1:
+                    System.out.println("Para cadastrar um funcionário digite seu nome: ");
+                    String nome = leitor.nextLine();
+                    System.out.println("CPF: ");
+                    String cpf = leitor.nextLine();
+                    System.out.println("Telefone: ");
+                    String telefone = leitor.nextLine();
+                    System.out.println("E-mail : ");
+                    String email = leitor.nextLine();
 
-                //Printando informações da lista na tela
-                funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " e-mail: " + email);
-                System.out.println(funcionarios);
-                System.out.println("Processo finalizado com sucesso!");
-            }
-            else if (menu == 2){
-                chave = false;
-                System.out.println("Você saiu do sistema de cadastro");
-            } else {
-                System.out.println("Digite um valor valido!");
+                    //Printando informações da lista na tela
+                    funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " e-mail: " + email);
+                    System.out.println(funcionarios);
+                    System.out.println("Processo finalizado com sucesso!");
+                    break;
+                case 2:
+                    chave = false;
+                    System.out.println("Você saiu do sistema de cadastro");
+                    break;
+
+                default:
+                    System.out.println("Digite um valor valido!");
+                    break;
             }
         }
     }
