@@ -12,7 +12,7 @@ public class Desafio1Modulo2 {
         Map<String, String> funcionarios = new HashMap<String, String>();
 
         System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
-
+        //fazendo lista de perguntas
         System.out.println("Para cadastrar um funcionário digite seu nome: ");
         String nome = leitor.nextLine();
         System.out.println("CPF: ");
