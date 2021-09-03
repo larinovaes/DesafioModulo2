@@ -17,7 +17,7 @@ public class Desafio1Modulo2 {
         while (chave == true) {
             //Fazendo o menu
             System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
-            System.out.println("Digite 1 para prosseguir no cadastro e 2 para sair.");
+            System.out.println("Digite 1 para prosseguir no cadastro, 2 para sair e 3 se deseja excluir funcionario cadastrado.");
             menu = leitor.nextInt();
             leitor.nextLine();
 
@@ -34,7 +34,8 @@ public class Desafio1Modulo2 {
                     String email = leitor.nextLine();
 
                     //Printando informações da lista na tela
-                    funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " e-mail: " + email);
+                    funcionarios.put(cpf,"\n Nome: " + nome + "\n Telefone: " + telefone + "\n e-mail: " + email);
+                    System.out.print("Funcionário cadastrado \n");
                     System.out.println(funcionarios);
                     System.out.println("Processo finalizado com sucesso!");
                     break;
@@ -42,7 +43,9 @@ public class Desafio1Modulo2 {
                     chave = false;
                     System.out.println("Você saiu do sistema de cadastro");
                     break;
-
+                case 3 :
+                    System.out.println("Digite o número do CPF para excluir funcionario: ");
+                    String exclusao = leitor.nextLine();
                 default:
                     System.out.println("Digite um valor valido!");
                     break;
