@@ -37,6 +37,12 @@ public class Desafio1Modulo2 {
                 System.out.println(funcionarios);
                 System.out.println("Processo finalizado com sucesso!");
             }
+            else if (menu == 2){
+                chave = false;
+                System.out.println("Você saiu do sistema de cadastro");
+            } else {
+                System.out.println("Digite um valor valido!");
+            }
         }
     }
 }
