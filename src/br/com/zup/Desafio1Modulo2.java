@@ -22,5 +22,9 @@ public class Desafio1Modulo2 {
         System.out.println("E-mail : ");
         String email = leitor.nextLine();
 
+        //Printando informações da lista na tela
+        funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " e-mail: " + email);
+        System.out.println(funcionarios);
+        System.out.println("Processo finalizado com sucesso!");
     }
 }
