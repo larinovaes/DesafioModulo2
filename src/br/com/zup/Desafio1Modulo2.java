@@ -11,5 +11,16 @@ public class Desafio1Modulo2 {
         Scanner leitor = new Scanner(System.in);
         Map<String, String> funcionarios = new HashMap<String, String>();
 
+        System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
+
+        System.out.println("Para cadastrar um funcionário digite seu nome: ");
+        String nome = leitor.nextLine();
+        System.out.println("CPF: ");
+        String cpf = leitor.nextLine();
+        System.out.println("Telefone: ");
+        String telefone = leitor.nextLine();
+        System.out.println("E-mail : ");
+        String email = leitor.nextLine();
+
     }
 }
