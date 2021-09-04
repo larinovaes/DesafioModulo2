@@ -19,8 +19,8 @@ public class Desafio1Modulo2 {
             System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
             System.out.println("Digite 1 para efetuar no cadastro.");
             System.out.println("Digite 2 para exibir a lista de funcionários cadastrado.");
-            System.out.println("Digite 3 para sair do programa");
-            System.out.println("Digite 4 para excluir funcionario.");
+            System.out.println("Digite 3 para excluir funcionário.");
+            System.out.println("Digite 4 para sair do programa");
             menu = leitor.nextInt();
             leitor.nextLine();
 
@@ -45,6 +45,17 @@ public class Desafio1Modulo2 {
                         System.out.println("Funcionário: " + funcionarios.get(funcionariosCadastrados));
                     break;
                 case 3:
+                    System.out.println("Para excluir funcionário digite o CPF do mesmo: ");
+                    String excluirCpf = leitor.nextLine();
+                    for (String cpfFuncio : funcionarios.keySet()) {
+
+                        if (cpfFuncio.equals(excluirCpf)) {
+                            System.out.println("Funcionário deletado com sucesso");
+                            funcionarios.remove(excluirCpf);
+                        }
+                    }
+                    break;
+                case 4:
                     System.out.println("Você saiu do sistema de cadastro");
                     chave = false;
                     break;
