@@ -32,6 +32,7 @@ public class Desafio1Modulo2 {
                     System.out.println("CPF: ");
                     String cpf = leitor.nextLine();
 
+                    //comparando CPFS para saber se já esta registrando
                     if (funcionarios.containsKey(cpf)) {
                         System.out.println("Esse CPF já esta registrado no sistema,por favor digite outro");
                         break;
