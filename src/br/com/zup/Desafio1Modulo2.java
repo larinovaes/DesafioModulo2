@@ -17,7 +17,7 @@ public class Desafio1Modulo2 {
         while (chave == true) {
             //Fazendo o menu
             System.out.println("--- Olá,vamos iniciar nosso cadastro! ---");
-            System.out.println("Digite 1 para efetuar no cadastro.");
+            System.out.println("Digite 1 para efetuar o cadastro.");
             System.out.println("Digite 2 para exibir a lista de funcionários cadastrado.");
             System.out.println("Digite 3 para excluir funcionário.");
             System.out.println("Digite 4 para sair do programa");
@@ -27,10 +27,16 @@ public class Desafio1Modulo2 {
             switch (menu) {
                 //fazendo lista de perguntas
                 case 1:
-                    System.out.println("Para cadastrar um funcionário digite seu nome: ");
+                    System.out.println("Nome do funcionário: ");
                     String nome = leitor.nextLine();
                     System.out.println("CPF: ");
                     String cpf = leitor.nextLine();
+
+                    if (funcionarios.containsKey(cpf)) {
+                        System.out.println("Esse CPF já esta registrado no sistema,por favor digite outro");
+                        break;
+                    }
+
                     System.out.println("Telefone: ");
                     String telefone = leitor.nextLine();
                     System.out.println("E-mail : ");
@@ -39,22 +45,21 @@ public class Desafio1Modulo2 {
                     System.out.println("Processo finalizado com sucesso!");
                     //Printando informações da lista na tela
                     funcionarios.put(cpf, "\n Nome: " + nome + "\n Telefone: " + telefone + "\n e-mail: " + email);
+
                     break;
                 case 2:
                     for (String funcionariosCadastrados : funcionarios.keySet())
                         System.out.println("Funcionário: " + funcionarios.get(funcionariosCadastrados));
                     break;
+
                 case 3:
                     System.out.println("Para excluir funcionário digite o CPF do mesmo: ");
                     String excluirCpf = leitor.nextLine();
-                    for (String cpfFuncio : funcionarios.keySet()) {
 
-                        if (cpfFuncio.equals(excluirCpf)) {
-                            System.out.println("Funcionário deletado com sucesso");
-                            funcionarios.remove(excluirCpf);
-                        }
-                    }
+                    funcionarios.remove(excluirCpf);
+                    System.out.println("CPF deletado com sucesso");
                     break;
+
                 case 4:
                     System.out.println("Você saiu do sistema de cadastro");
                     chave = false;
