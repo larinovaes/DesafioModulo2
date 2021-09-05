@@ -12,7 +12,7 @@ public class Desafio1Modulo2 {
         Map<String, String> funcionarios = new HashMap<String, String>();
 
         boolean chave = true;
-        int menu = 0;
+        int menu;
 
         while (chave == true) {
             //Fazendo o menu
